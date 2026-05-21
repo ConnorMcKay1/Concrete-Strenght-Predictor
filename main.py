@@ -1,0 +1,130 @@
+import os
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from scipy import stats
+from scipy.io import arff
+
+
+'''
+
+SIMPLE RELATIONSHIPS:
+    Which variables are related to the output?
+    Are relationships linear or monotonic?
+        
+PREDICTIVE MODELING:
+    How well can I predict the output from the inputs?
+    ****Which variables matter most?****  use this to find out which variable affects strenght the most?
+
+EFFECTS OF INTERACTION:
+    Do variables combine in not obvious ways?
+
+
+  ***************************
+** OvEr ArChInG ReSeArCh AiM **
+
+PREDICT CONCRETE STRENGHT based on the ingredient input amounts/auntities?
+    --> Wounldn't this just yield the "ideal"
+    *   concrete mix? (ignoring prediction errors obviously)    *
+    **************************************************************
+
+'''
+        #   SciPy Documentation Recomended
+    # Make All 8 Variables in Scatter Plots
+    # Look into Correlation Coefficient (r)
+    #   (Measures the Strgth & dir. of linear relationship)
+    # Regression Analysis: would create a "line of best fit"
+    #                      to model the relationship & make predictions                      
+##################################################################
+
+from utilsStats import *
+from plotting import *
+from utilsProbs import *
+
+print("test test turnip \n")
+
+#----------------------------------------------------------------------------------------------------------------------------------
+    # This is 'concrete_compresssive_strencth.csv --> (data_1)
+#dataFile = ("data_1.csv")
+ 
+    # This is 'concrete_resistance.csv  --> (data_2) --> this is the one with 10 columns and 2 differenct variables
+#dataFile = ("data_2.csv")
+
+    # This is Dataset2 - Data.csv --> (data_3)
+#dataFile = ("data_3.csv")
+
+    # This is from OpenML --> data_4
+dataFile = ("data_4.csv")
+#----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    # just reading in the 1 of the data sets to get the 2 columns for the scatter
+    # for the scatter plot method below
+def DataReadIn(csvFile):
+    df = pd.read_csv(csvFile)
+    
+    xAxis_Column = df.iloc[:, 0].tolist()
+    yAxis_Column = df.iloc[:, 8].tolist()
+    return xAxis_Column, yAxis_Column, df
+
+xAxis_Column, yAxis_Column, df = DataReadIn(dataFile)
+
+
+    # just a bunch of calls to the functions in utilsStats.py
+def UtilsPrinter():
+    print(xAxis_Column)
+    print("----------------------------------------------------------------------------------------")
+    print(yAxis_Column)
+    print("------------------")
+    Mean(xAxis_Column)
+    print("------------------")
+    StandardDeviation(xAxis_Column)
+    print("------------------")
+    Correlation(xAxis_Column, yAxis_Column)
+    print("------------------")
+    RegressionLine(xAxis_Column, yAxis_Column)
+    print("------------------")
+    Covariance(xAxis_Column, yAxis_Column)
+
+
+def test():
+    print("Conversion complete!")
+
+
+# example from first line for data_1.csv
+# 550, 0, 0, 165, 3.3, 584, 607, 7, 49.71
+# 385,0,165,148,6.05,702,729,7,18.53
+# 275,0,275,146,5.5,717,745,7,15.09
+# 165,0,385,172,4.4,728,757,7,6.34
+# 385,165,0,155,6.6,778,815,7,42.
+# 275,275,0,162,6.05,753,789,7,46.49
+# 165,385,0,172,4.4,695,729,7,38.28
+if __name__ == "__main__":
+    print("main runner")
+    
+    
+    # this is being added after presenting, it is
+    # just to add context for what is going on
+    file_name = os.path.basename(dataFile) 
+    numberOfRows = len(df)
+    numberOfColumns = len(df.columns)
+    print(f' number of rows in {file_name} : {numberOfRows} \n and the number of columns: {numberOfColumns}' ) 
+    
+    
+    
+    theta, epsilon, y_hat = ThetaFinder(df)
+    
+    #input/quantities to see what the strenght "would be" (within in error/epsilon)
+    x_new = np.array([[298.2,0.0,107.0,209.7,11.1,879.6,744.2,28.0]])
+    y_pred = Predict(x_new, theta)
+
+    print("PREDICTION OF y:")
+    print(y_pred)
+    
+    y = TargetVector(df)
+    PlotDiagnostics(y, y_hat, epsilon)
+    
+    
+    

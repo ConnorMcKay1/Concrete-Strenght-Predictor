@@ -14,7 +14,8 @@ Predicting the stregth was discussed and that then became the goal of the projec
 Four concrete compressive strength data sets were sourced online and are used as training data for the predictions.
     These are toggled between becasue each .csv file has a different schema
 
-#### `main.py`
+### `main.py`
+
 <p>
   <p style="margin-left: 40px;">
   Reads in data set selected
@@ -28,6 +29,7 @@ Four concrete compressive strength data sets were sourced online and are used as
     Predict returns y_pred and it is printed to the terminal.
     </p>
  </p>   
+ 
 ### `utilsProbs.py`
 
 This utility file mostly contains functions supporting the `ThetaFinder` function (θ = (((X^T)*X)^-1)*(X^T)*(~>y)):

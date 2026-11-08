@@ -16,19 +16,13 @@ Four concrete compressive strength data sets were sourced online and are used as
 
 ### `main.py`
 
-<p>
-  <p style="margin-left: 40px;">
-  Reads in data set selected
-  Creates x-axis and y-axis for Diagnostics Plot
-  Main runner is the main entry point for the program.
-  </p> 
-    <p style="margin-left: 80px;">
-    It converts the data set into a data frame,
-    this data frame is then sent to ThetaFinder in utilsProbs.py,
-    the thetas and ingredient quantity inputs are then sent to Predict in utilsProbs.py,
-    Predict returns y_pred and it is printed to the terminal.
-    </p>
- </p>   
+    Reads in data set selected
+    Creates x-axis and y-axis for Diagnostics Plot
+    Main runner is the main entry point for the program.
+        It converts the data set into a data frame,
+        this data frame is then sent to ThetaFinder in utilsProbs.py,
+        the thetas and ingredient quantity inputs are then sent to Predict in utilsProbs.py,
+        Predict returns y_pred and it is printed to the terminal. 
  
 ### `utilsProbs.py`
 

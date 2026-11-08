@@ -46,11 +46,18 @@ Build a concrete strength predictor that uses data from tests to inform what a s
 
 <table border="0" align="center">
   <tr>
-    <td align="center"><img src="images-plots-figures/results_images/data_1 (PlotDiagnostics) (1).png" width="400" alt="Image 1"></td>
-    <td align="center"><img src="images-plots-figures/results_images/data_3 (PlotDiagnostics) (1).png" width="400" alt="Image 2"></td>
+    <td align="center"><img src="images-plots-figures/results_images/data_1 (Terminal) (1).png" width="400" alt="Image 1"></td>
+    <td align="center"><img src="images-plots-figures/results_images/data_1 (PlotDiagnostics) (1).png" width="400" alt="Image 2"></td>
   </tr>
+  
   <tr>
-    <td colspan="2" align="center"><img src="images-plots-figures/results_images/data_4 (PlotDiagnostics) (1).png" width="400" alt="Image 3"></td>
+    <td align="center"><img src="images-plots-figures/results_images/data_3 (Terminal) (1).png" width="400" alt="Image 1"></td>
+    <td align="center"><img src="images-plots-figures/results_images/data_3 (PlotDiagnostics) (1).png" width="400" alt="Image 3"></td>
+  </tr>
+
+  <tr>
+    <td align="center"><img src="images-plots-figures/results_images/data_4 (Terminal) (1).png" width="400" alt="Image 1"></td>
+    <td align="center"><img src="images-plots-figures/results_images/data_4 (PlotDiagnostics) (1).png" width="400" alt="Image 3"></td>
   </tr>
 </table>
 

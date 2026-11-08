@@ -25,14 +25,14 @@ main.py
 
 utilsProbs.py
   This utility file mostly contains functions supporting the ThetaFinder function (θ = (((X^T)*X)^-1)*(X^T)*(~>y)):
-   - MatrixCreator     retruns: matrix
-   - MatrixDummyColumn returns: finalMatrix
-   - MatrixMultiplier  returns: result
-   - MatrixTranspose   returns: transposedMatrix
-   - MatrixInverse     returns: inversedMatrix
-   - TargetVector      returns: y
-   - ThetaFinder       returns: theta, epsilon, y_hat
-   - Predict           returns: y_pred
+    - MatrixCreator     retruns: matrix
+    - MatrixDummyColumn returns: finalMatrix
+    - MatrixMultiplier  returns: result
+    - MatrixTranspose   returns: transposedMatrix
+    - MatrixInverse     returns: inversedMatrix
+    - TargetVector      returns: y
+    - ThetaFinder       returns: theta, epsilon, y_hat
+    - Predict           returns: y_pred
 
 utilsStats.py
   The utility stats file is comprized of functions that are needed inside of Plotting.py:

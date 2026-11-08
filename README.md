@@ -10,7 +10,7 @@ based project instead of a statistical one.
 Predicting the stregth was discussed and that then became the goal of the project.
 
 ## How it was done / Structure
-
+<p>
 Four concrete compressive strength data sets were sourced online and are used as training data for the predictions.
   These are toggled between becasue each .csv file has a different schema
 
@@ -25,14 +25,14 @@ main.py
 
 utilsProbs.py
   This utility file mostly contains functions supporting the ThetaFinder function (θ = (((X^T)*X)^-1)*(X^T)*(~>y)):
-    MatrixCreator     retruns: matrix
-    MatrixDummyColumn returns: finalMatrix
-    MatrixMultiplier  returns: result
-    MatrixTranspose   returns: transposedMatrix
-    MatrixInverse     returns: inversedMatrix
-    TargetVector      returns: y
-    ThetaFinder       returns: theta, epsilon, y_hat
-    Predict           returns: y_pred
+   - MatrixCreator     retruns: matrix
+   - MatrixDummyColumn returns: finalMatrix
+   - MatrixMultiplier  returns: result
+   - MatrixTranspose   returns: transposedMatrix
+   - MatrixInverse     returns: inversedMatrix
+   - TargetVector      returns: y
+   - ThetaFinder       returns: theta, epsilon, y_hat
+   - Predict           returns: y_pred
 
 utilsStats.py
   The utility stats file is comprized of functions that are needed inside of Plotting.py:
@@ -48,6 +48,8 @@ plotting.py
     LinearRegression_AllColumns -> plots regression line for each ingredient (x) against respective stregth (y)
     DistributionPlot -> plots a histogram and probability density function overlay for each the ingredients
     PlotDiagnostics -> shows 3 subplots: predicted vs actual, residuals vs prediction, error magnitude plot
+
+</p>
 
 <hr style="border: none; height: 5px; background-color: #ff6b6b;">
 

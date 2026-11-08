@@ -48,7 +48,7 @@ Build a concrete strength predictor that uses data from tests to inform what a s
   <tr>
     <td align="center">
       <img src="images-plots-figures/results_images/data_1 (Terminal) (1).png" width="400" alt="Image 1">
-      <h6> data_1.csv, line 6: 385,165,0,155,6.6,778,815,7, y = 42.83 <h6>
+      <h6> line 6: 385,165,0,155,6.6,778,815,7, y = 42.83 <h6>
     </td>
     <td align="center">
       <img src="images-plots-figures/results_images/data_1 (PlotDiagnostics) (1).png" width="400" alt="Image 2">
@@ -58,7 +58,7 @@ Build a concrete strength predictor that uses data from tests to inform what a s
   <tr>
     <td align="center">
       <img src="images-plots-figures/results_images/data_3 (Terminal) (1).png" width="400" alt="Image 1">
-      <h6> data_3.csv, line 61: 148.10,0.00,136.60,158.10,16.10,1001.80,830.10,28.00, y = 17.96 <h6>
+      <h6> line 61: 148.1,0,136.6,158.1,16.1,1001.8,830.1,28, y = 17.96 <h6>
     </td>
     <td align="center">
       <img src="images-plots-figures/results_images/data_3 (PlotDiagnostics) (1).png" width="400" alt="Image 3">
@@ -68,7 +68,7 @@ Build a concrete strength predictor that uses data from tests to inform what a s
   <tr>
     <td align="center">
       <img src="images-plots-figures/results_images/data_4 (Terminal) (1).png" width="400" alt="Image 1">
-      <h6> data_4.csv, line 13  198.6,132.4,0.0,192.0,0.0,978.4,825.5,28.0, y = 28.021683592 <h6>
+      <h6> line 13  198.6,132.4,0,192,0,978.4,825.5,28, y = 28.021683592 <h6>
     </td>
     <td align="center">
       <img src="images-plots-figures/results_images/data_4 (PlotDiagnostics) (1).png" width="400" alt="Image 3">

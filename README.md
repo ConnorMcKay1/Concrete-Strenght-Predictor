@@ -23,18 +23,27 @@ main.py
     the thetas and ingredient quantity inputs are then sent to Predict in utilsProbs.py,
     Predict returns y_pred and it is printed to the terminal.
 
-utilsProbs.py
-  This utility file mostly contains functions supporting the ThetaFinder function (θ = (((X^T)*X)^-1)*(X^T)*(~>y)):
-    ````
-    MatrixCreator     retruns: matrix
-    MatrixDummyColumn returns: finalMatrix
-    MatrixMultiplier  returns: result
-    MatrixTranspose   returns: transposedMatrix
-    MatrixInverse     returns: inversedMatrix
-    TargetVector      returns: y
-    ThetaFinder       returns: theta, epsilon, y_hat
-    Predict           returns: y_pred
-    ````
+### `utilsProbs.py`
+
+This utility file mostly contains functions supporting the `ThetaFinder` function:
+
+\[
+\theta = ((X^T X)^{-1})(X^T)\tilde{y}
+\]
+
+**Available functions and return values:**
+
+```text
+MatrixCreator       returns: matrix
+MatrixDummyColumn   returns: finalMatrix
+MatrixMultiplier    returns: result
+MatrixTranspose     returns: transposedMatrix
+MatrixInverse       returns: inversedMatrix
+TargetVector        returns: y
+ThetaFinder         returns: theta, epsilon, y_hat
+Predict             returns: y_pred
+```
+    
 utilsStats.py
   The utility stats file is comprized of functions that are needed inside of Plotting.py:
     Mean              returns: mean

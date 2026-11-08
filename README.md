@@ -10,29 +10,26 @@ based project instead of a statistical one.
 Predicting the stregth was discussed and that then became the goal of the project.
 
 ## How it was done / Structure
-<p>
-Four concrete compressive strength data sets were sourced online and are used as training data for the predictions.
-  These are toggled between becasue each .csv file has a different schema
 
-main.py
+Four concrete compressive strength data sets were sourced online and are used as training data for the predictions.
+    These are toggled between becasue each .csv file has a different schema
+
+#### `main.py`
+  <p style="margin-left: 40px;">
   Reads in data set selected
   Creates x-axis and y-axis for Diagnostics Plot
   Main runner is the main entry point for the program.
+  </p> 
+    <p style="margin-left: 80px;">
     It converts the data set into a data frame,
     this data frame is then sent to ThetaFinder in utilsProbs.py,
     the thetas and ingredient quantity inputs are then sent to Predict in utilsProbs.py,
     Predict returns y_pred and it is printed to the terminal.
-
+    </p>
+    
 ### `utilsProbs.py`
 
-This utility file mostly contains functions supporting the `ThetaFinder` function:
-
-\[
-\theta = ((X^T X)^{-1})(X^T)\tilde{y}
-\]
-
-**Available functions and return values:**
-
+This utility file mostly contains functions supporting the `ThetaFinder` function (θ = (((X^T)*X)^-1)*(X^T)*(~>y)):
 ```text
 MatrixCreator       returns: matrix
 MatrixDummyColumn   returns: finalMatrix
@@ -44,22 +41,26 @@ ThetaFinder         returns: theta, epsilon, y_hat
 Predict             returns: y_pred
 ```
     
-utilsStats.py
-  The utility stats file is comprized of functions that are needed inside of Plotting.py:
-    Mean              returns: mean
-    StandardDeviation returns: standard_deviation
-    Correlation       returns: correlation
-    RegressionLine    returns: result
-    Covariance        returns: covariance
-    Distribution      returns: mu, sigma
+### `utilsStats.py`
 
-plotting.py
-  There are only three functions used for plotting/graphs:
-    LinearRegression_AllColumns -> plots regression line for each ingredient (x) against respective stregth (y)
-    DistributionPlot -> plots a histogram and probability density function overlay for each the ingredients
-    PlotDiagnostics -> shows 3 subplots: predicted vs actual, residuals vs prediction, error magnitude plot
+The utility stats file is comprized of functions that are needed inside of Plotting.py:
+```text
+Mean              returns: mean
+StandardDeviation returns: standard_deviation
+Correlation       returns: correlation
+RegressionLine    returns: result
+Covariance        returns: covariance
+Distribution      returns: mu, sigma
+```
 
-</p>
+### `plotting.py`
+
+There are only three functions used for plotting/graphs:
+```text
+LinearRegression_AllColumns -> plots regression line for each ingredient (x) against respective stregth (y)
+DistributionPlot -> plots a histogram and probability density function overlay for each the ingredients
+PlotDiagnostics -> shows 3 subplots: predicted vs actual, residuals vs prediction, error magnitude plot
+```
 
 <hr style="border: none; height: 5px; background-color: #ff6b6b;">
 
@@ -128,7 +129,7 @@ plotting.py
   <tr>
     <td align="center">
       <img src="images-plots-figures/results_images/data_4 (Terminal) (1).png" width="400" alt="Image 1">
-      <h6> line 13  198.6,132.4,0,192,0,978.4,825.5,28, y = 28.021683592 <h6>
+      <h6> line 13:  198.6,132.4,0,192,0,978.4,825.5,28, y = 28.021683592 <h6>
     </td>
     <td align="center">
       <img src="images-plots-figures/results_images/data_4 (PlotDiagnostics) (1).png" width="400" alt="Image 3">

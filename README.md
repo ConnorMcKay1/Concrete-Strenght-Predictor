@@ -15,6 +15,7 @@ Four concrete compressive strength data sets were sourced online and are used as
     These are toggled between becasue each .csv file has a different schema
 
 #### `main.py`
+<p>
   <p style="margin-left: 40px;">
   Reads in data set selected
   Creates x-axis and y-axis for Diagnostics Plot
@@ -26,7 +27,7 @@ Four concrete compressive strength data sets were sourced online and are used as
     the thetas and ingredient quantity inputs are then sent to Predict in utilsProbs.py,
     Predict returns y_pred and it is printed to the terminal.
     </p>
-    
+ </p>   
 ### `utilsProbs.py`
 
 This utility file mostly contains functions supporting the `ThetaFinder` function (θ = (((X^T)*X)^-1)*(X^T)*(~>y)):
@@ -103,7 +104,7 @@ PlotDiagnostics -> shows 3 subplots: predicted vs actual, residuals vs predictio
 
 <hr style="border: none; height: 5px; background-color: #ff6b6b;">
 
-<h4 align = "Center"> Strength Prediction Diagnostics <h4>
+<h4 align = "Center"> Strength Prediction Results & Diagnostics <h4>
 
 <table border="0" align="center">
   <tr>
